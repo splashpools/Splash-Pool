@@ -138,6 +138,14 @@ document.addEventListener("DOMContentLoaded", () => {
     forms.forEach(form => {
         form.addEventListener('submit', async (event) => {
             event.preventDefault();
+
+            // Validate reCAPTCHA
+            const recaptchaResponse = form.querySelector('.g-recaptcha-response');
+            if (recaptchaResponse && !recaptchaResponse.value) {
+                alert("Please complete the reCAPTCHA robot check.");
+                return;
+            }
+
             const submitBtn = form.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerHTML;
 
