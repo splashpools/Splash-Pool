@@ -7,7 +7,7 @@
 const headerHTML = `
 <header>
     <div class="content header-flex">
-        <a href="index.html" class="logo-wrapper">
+        <a href="/" class="logo-wrapper">
             <img src="img/logo.png" alt="Splash Pools Logo" class="logo-img">
         </a>
         <button class="hamburger-btn" aria-label="Toggle navigation">
