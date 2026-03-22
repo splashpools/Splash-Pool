@@ -1,0 +1,116 @@
+/* ==========================================================================
+   FOOTER STYLES
+   ========================================================================== */
+footer {
+    background-color: var(--text-main);
+    color: var(--white);
+    padding: 5rem 1.5rem 2rem;
+}
+
+.footer-v2 {
+    background: #0a0a0a;
+    color: white;
+    padding: 6rem 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    border-bottom: 1px solid var(--slate-800);
+    padding-bottom: 4rem;
+}
+
+.footer-grid-v2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    gap: 4rem;
+}
+
+.footer-section h4,
+.footer-links h4 {
+    margin-bottom: 1.5rem;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: var(--slate-400);
+}
+
+.footer-links a:hover {
+    color: var(--white);
+}
+
+.footer-brand p {
+    color: var(--slate-400);
+}
+
+.footer-logo {
+    max-width: 180px;
+    margin-bottom: 2rem;
+}
+
+.footer-map img {
+    width: 100%;
+    border-radius: 12px;
+    filter: grayscale(1);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--slate-800);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-btn:hover {
+    background: var(--primary);
+}
+
+/* Footer Bottom Area */
+.footer-bottom {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--slate-400);
+    font-size: 0.75rem;
+}
+
+.footer-link-phone,
+.footer-link-email {
+    display: flex;
+    gap: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .footer-grid-v2 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .footer-grid,
+    .footer-grid-v2 {
+        grid-template-columns: 1fr;
+    }
+
+    .policy-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

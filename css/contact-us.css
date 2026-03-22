@@ -1,0 +1,326 @@
+/* ==========================================================================
+   V2 STANDALONE STYLES (Contact Page)
+   ========================================================================== */
+
+:root {
+    --primary: #0c6ed1;
+    --primary-hover: #0059c1;
+    --primary-deep: #0041a3;
+    --primary-soft: #f0f7ff;
+    --primary-light: #e6f0ff;
+    --background-light: #f8fafc;
+    --text-main: #111518;
+    --text-muted: #617989;
+    --white: #ffffff;
+    --border-light: #f0f3f4;
+    --border-card: #dbe1e6;
+    --transition: 0.3s ease;
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 20px 25px -5px rgba(19, 146, 236, 0.2);
+}
+
+/* Base Reset & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+    font-weight: 900;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+/* Layout Containers */
+.content {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1440px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-10 {
+    margin-bottom: 2.5rem;
+}
+
+.font-black {
+    font-weight: 900;
+}
+
+/* Buttons & Utilities */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-submit {
+    width: 100%;
+    height: 3.5rem;
+    font-size: 1.125rem;
+}
+
+.icon-box {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(12, 110, 209, 0.1);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+
+/* Page Hero */
+.page-hero {
+    background: linear-gradient(rgba(0, 65, 163, 0.8), rgba(0, 89, 193, 0.8)), url("../img/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    color: var(--white);
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+}
+
+.page-hero p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Contact Info Grid */
+.contact-info-section {
+    padding: 50px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.info-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 1.25rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform var(--transition);
+    border: 1px solid var(--border-light);
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card .icon-box {
+    margin: 0 auto 1.5rem;
+}
+
+.info-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.info-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.info-link {
+    color: var(--primary);
+    font-weight: 700;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    padding: 80px 0;
+    background-color: var(--primary);
+}
+
+.form-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 4rem;
+    border-radius: 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--border-card);
+}
+
+.form-grid-v2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.form-section-header {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-light);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.col-full {
+    grid-column: span 4;
+}
+
+.col-span-2 {
+    grid-column: span 2;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    width: 100%;
+    flex-direction: row;
+    grid-column: span 4;
+}
+
+.checkbox-group input {
+    width: 1.25rem;
+    height: 1.25rem;
+    cursor: pointer;
+}
+
+input,
+textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--border-card);
+    border-radius: 0.5rem;
+    background: transparent;
+    color: inherit;
+    font-family: inherit;
+    width: 100%;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(19, 146, 236, 0.1);
+}
+
+/* Animation Reveal 
+   (Now handled globally by styles.css and .reveal class) */
+
+/* WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.whatsapp-float img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+@media (max-width: 992px) {
+    .form-container {
+        padding: 3rem;
+    }
+
+    .form-grid-v2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .col-full,
+    .col-span-2,
+    .checkbox-group {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        padding: 2rem 1.5rem;
+    }
+
+    .form-grid-v2 {
+        grid-template-columns: 1fr;
+    }
+
+    .col-full,
+    .col-span-2,
+    .checkbox-group {
+        grid-column: span 1;
+    }
+
+    .page-hero {
+        padding: 60px 20px;
+    }
+
+    .page-hero h1 {
+        font-size: 2.5rem;
+    }
+}

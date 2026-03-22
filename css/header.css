@@ -1,0 +1,159 @@
+/* ==========================================================================
+   HEADER & NAVIGATION
+   ========================================================================== */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2.5rem;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border-light);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    transition: background-color var(--transition), border-color var(--transition);
+}
+
+/* Glassmorphism for V2 Header */
+.v2-theme header {
+    background: var(--v2-glass) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--v2-slate-100) !important;
+}
+
+body.dark header {
+    background-color: var(--background-dark);
+    border-bottom-color: var(--slate-800);
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 200px;
+}
+
+.logo-img {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2.25rem;
+}
+
+.nav-link {
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
+    font-size: 2.25rem;
+    padding: 0;
+}
+
+.hamburger-btn .material-symbols-outlined {
+    font-size: 2.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        padding: 0.75rem 1rem;
+    }
+
+    .hamburger-btn {
+        display: block;
+    }
+
+    nav.main-nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        padding: 0 1.5rem;
+        gap: 1.5rem; /* Better spacing for mobile */
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px) scale(0.98);
+        transform-origin: top center;
+        transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+                    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                    padding 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                    border-top-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border-top: 1px solid transparent;
+    }
+
+    nav.main-nav.active {
+        max-height: 500px;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0) scale(1);
+        padding: 2rem 1.5rem;
+        border-top-color: var(--border-light);
+    }
+
+    nav.main-nav .btn {
+        display: none !important;
+    }
+
+    nav.main-nav .nav-link {
+        display: block;
+        font-size: 1.25rem;
+        font-weight: 700;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--border-light);
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    
+    nav.main-nav.active .nav-link {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Staggered entry animations */
+    nav.main-nav.active .nav-link:nth-child(1) { transition-delay: 0.1s; }
+    nav.main-nav.active .nav-link:nth-child(2) { transition-delay: 0.15s; }
+    nav.main-nav.active .nav-link:nth-child(3) { transition-delay: 0.2s; }
+    nav.main-nav.active .nav-link:nth-child(4) { transition-delay: 0.25s; }
+    
+    nav.main-nav .nav-link:last-of-type {
+        border-bottom: none;
+    }
+    
+    /* V2 theme support */
+    .v2-theme nav.main-nav {
+        background: var(--v2-glass);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+}
