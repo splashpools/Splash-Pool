@@ -145,6 +145,23 @@ a {
 /* ==========================================================================
    COMMONS & UTILITIES
    ========================================================================== */
+.hide-on-mobile {
+    display: inline-flex !important;
+}
+
+.show-on-mobile {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .hide-on-mobile {
+        display: none !important;
+    }
+    .show-on-mobile {
+        display: inline-flex !important;
+    }
+}
+
 .text-center {
     text-align: center;
 }

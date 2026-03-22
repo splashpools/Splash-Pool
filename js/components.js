@@ -29,9 +29,9 @@ const footerHTML = `
 <footer>
     <div class="content footer-grid">
         <div class="footer-section">
-            <div class="logo-wrapper mb-10">
+            <a href="/" class="logo-wrapper mb-10">
                 <img src="img/logo-white.png" alt="Splash Pools Logo" class="logo-img">
-            </div>
+            </a>
             <p class="text-muted" style="font-size: 0.875rem; line-height: 1.6; margin-bottom: 2rem;">
                 Building premium aquatic experiences since 1998. Quality craftsmanship meets modern
                 engineering in every project.
