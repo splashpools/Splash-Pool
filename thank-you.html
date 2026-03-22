@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Thank You - Splash Pool & SPA Services</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/thank-you.css">
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NZWC6MFM');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+
+<body class="light">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZWC6MFM" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="layout-container">
+
+        <main>
+            <section class="thank-you-container">
+                <span class="material-symbols-outlined success-icon">check_circle</span>
+                <h1 class="thank-you-title">Thank You for Contacting Us!</h1>
+                <p class="thank-you-message">Your message has been sent successfully. We will get back to you shortly.
+                </p>
+
+                <p class="redirect-text">You will be automatically redirected in <span id="timer"
+                        class="countdown">5</span> seconds...</p>
+
+                <a href="index.html" class="btn btn-primary" style="margin-top: 1rem;">Back to Home</a>
+            </section>
+        </main>
+
+    </div>
+
+    <script>
+        // Redirect logic
+        let count = 5;
+        const timerElement = document.getElementById('timer');
+
+        const countdown = setInterval(() => {
+            count--;
+            timerElement.textContent = count;
+            if (count <= 0) {
+                clearInterval(countdown);
+                // Return to previous page or home if no referrer
+                if (document.referrer && document.referrer !== window.location.href) {
+                    window.location.href = document.referrer;
+                } else {
+                    window.location.href = 'index.html';
+                }
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
