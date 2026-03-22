@@ -155,8 +155,9 @@ a {
 
 @media (max-width: 768px) {
     .hide-on-mobile {
-        display: none !important; 
+        display: none !important;
     }
+
     .show-on-mobile {
         display: inline-flex !important;
     }
@@ -999,6 +1000,13 @@ textarea:invalid:focus {
 /* ==========================================================================
    RESPONSIVE DESIGN
    ========================================================================== */
+
+@media (max-width: 1300px) {
+    .checklist li {
+        width: 100%;
+    }
+}
+
 @media (max-width: 1024px) {
     .hero-slider {
         height: 600px;
