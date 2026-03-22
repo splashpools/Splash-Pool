@@ -132,6 +132,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Trigger once on load
     reveal();
+
+    // AJAX Form Handling
+    const forms = document.querySelectorAll('form[action^="https://formspree.io"]');
+    forms.forEach(form => {
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="material-symbols-outlined icon-small" style="animation: spin 1s linear infinite">sync</span> Sending...';
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    window.location.href = 'thank-you.html';
+                } else {
+                    const data = await response.json();
+                    alert(data.errors ? data.errors.map(e => e.message).join(", ") : "Oops! There was a problem.");
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+                }
+            } catch (error) {
+                alert("Oops! There was a connection problem.");
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            }
+        });
+    });
 });
 
 // Image Modal Logic
@@ -139,12 +175,14 @@ function openImageModal(imgSrc, captionText) {
     var modal = document.getElementById("imageModal");
     var modalImg = document.getElementById("img01");
     var caption = document.getElementById("imageModalCaption");
-    modal.style.display = "block";
-    modalImg.src = imgSrc;
-    caption.innerHTML = captionText;
+    if (modal && modalImg && caption) {
+        modal.style.display = "block";
+        modalImg.src = imgSrc;
+        caption.innerHTML = captionText;
+    }
 }
 
 function closeImageModal() {
     var modal = document.getElementById("imageModal");
-    modal.style.display = "none";
+    if (modal) modal.style.display = "none";
 }
