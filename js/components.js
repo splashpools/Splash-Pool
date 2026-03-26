@@ -14,11 +14,11 @@ const headerHTML = `
             <span class="material-symbols-outlined">menu</span>
         </button>
         <nav class="main-nav">
-            <a class="nav-link" href="/">Home</a>
-            <a class="nav-link" href="/services">Services</a>
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="services.html">Services</a>
             <!--<a class="nav-link" href="#">Portfolio</a>
             <a class="nav-link" href="#">Testimonials</a>-->
-            <a class="nav-link" href="/contact-us">Contact</a>
+            <a class="nav-link" href="contact-us.html">Contact</a>
             <a href="#contact" class="btn btn-primary">Get a Quote</a>
         </nav>
     </div>
@@ -41,10 +41,10 @@ const footerHTML = `
         <div class="footer-section">
             <h4>Quick Links</h4>
             <ul class="footer-links">
-                <li><a href="/services">Services</a></li>
-                <li><a href="/services#pool-opening">Pool Opening Service</a></li>
-                <li><a href="/services#pool-closing">Pool Closing Service</a></li>
-                <li><a href="/contact-us">Contact Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="services.html#pool-opening">Pool Opening Service</a></li>
+                <li><a href="services.html#pool-closing">Pool Closing Service</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
             </ul>
         </div>
 

@@ -600,58 +600,22 @@
                                 <label for="zip">ZIP</label>
                                 <input type="text" id="zip" name="zip" required placeholder="33065">
                             </div>
-
-                            <!-- Payment Section -->
-                            <div class="form-section-header col-full">Payment Details</div>
-                            <div class="form-group">
-                                <label for="check_no">Check #</label>
-                                <input type="text" id="check_no" name="check_no" placeholder="Optional">
-                            </div>
-                            <div class="form-group">
-                                <label for="amount">Amount</label>
-                                <input type="text" id="amount" name="amount" placeholder="$0.00">
-                            </div>
-                            <div class="form-group col-span-2">
-                                <label for="cc_number">Credit Card #</label>
-                                <input type="text" id="cc_number" name="cc_number" placeholder="0000-0000-0000-0000">
-                            </div>
-                            <div class="form-group">
-                                <label for="exp_date">Expiration Date</label>
-                                <input type="text" id="exp_date" name="exp_date" placeholder="MM/YY">
-                            </div>
-                            <div class="form-group">
-                                <label for="sec_code">Sec Code</label>
-                                <input type="text" id="sec_code" name="sec_code" placeholder="CVV">
-                            </div>
-                            <div class="form-group col-full">
-                                <label for="billing_info">C. Card ZIP Code & House number associated</label>
-                                <input type="text" id="billing_info" name="billing_info" placeholder="House # & ZIP">
-                            </div>
-
+                            
                             <!-- Service Details Section -->
-                            <div class="form-section-header col-full">Service Schedule</div>
-                            <div class="form-group col-span-2">
-                                <label for="closing_date">Desired date for pool closing</label>
-                                <input type="date" id="closing_date" name="closing_date">
-                            </div>
-                            <div class="form-group col-span-2">
-                                <label for="today_date">Today's Date</label>
-                                <input type="date" id="today_date" name="today_date">
+                            <div class="form-section-header col-full">Service Details</div>
+                            <div class="form-group col-full">
+                                <label for="service_type">Type of Service</label>
+                                <select id="service_type" name="service_type" required>
+                                    <option value="" disabled selected>Select a Service...</option>
+                                    <option value="Pool Opening">Pool Opening</option>
+                                    <option value="Pool Closing">Pool Closing / Winterization</option>
+                                    <option value="Routine Maintenance">Routine Maintenance</option>
+                                </select>
                             </div>
                             <div class="form-group col-full">
-                                <label for="signature">Customer's Signature</label>
-                                <input type="text" id="signature" name="signature" placeholder="Type name as signature">
+                                <label for="comments">Comments / Details</label>
+                                <textarea id="comments" name="comments" rows="4" placeholder="Please specify your request..."></textarea>
                             </div>
-
-                            <div class="form-group checkbox-group">
-                                <input type="checkbox" id="agreement" name="agreement" required>
-                                <label for="agreement">I HAVE READ, UNDERSTOOD AND AGREE WITH THE CONTRACT TERMS</label>
-                            </div>
-
-                            <div class="form-group col-full">
-                                <div class="g-recaptcha" data-sitekey="6LdFnpMsAAAAAFwe-Pg-Zal4mgX9T-f9pIIk1PuC"></div>
-                            </div>
-
                             <div class="col-full mt-4">
                                 <button type="submit" class="btn btn-primary btn-submit">
                                     Submit Information

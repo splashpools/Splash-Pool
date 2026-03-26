@@ -486,7 +486,8 @@ h2.section-title-large {
 }
 
 input,
-textarea {
+textarea,
+select {
     padding: 0.75rem;
     border: 1px solid var(--border-card);
     border-radius: 0.5rem;
@@ -497,7 +498,8 @@ textarea {
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
     outline: none;
     border-color: var(--primary);
     box-shadow: 0 0 0 3px rgba(19, 146, 236, 0.1);
@@ -789,7 +791,7 @@ textarea:focus {
 .closing-tab-section .service-policy-note {
     background: rgba(0, 0, 0, 0.05);
     border-left: 4px solid var(--primary);
-    color: #444; 
+    color: #444;
 }
 
 .closing-tab-section .service-policy-note strong {
@@ -814,4 +816,4 @@ textarea:focus {
 
 .mobile-opening-section .service-policy-note strong {
     color: #3ffff8;
-}
+}
