@@ -8,7 +8,7 @@ const headerHTML = `
 <header>
     <div class="content header-flex">
         <a href="/" class="logo-wrapper">
-            <img src="img/logo.png" alt="Splash Pools Logo" class="logo-img">
+            <img src="img/logo.svg" alt="Splash Pools Logo" class="logo-img">
         </a>
         <button class="hamburger-btn" aria-label="Toggle navigation">
             <span class="material-symbols-outlined">menu</span>
@@ -28,9 +28,9 @@ const headerHTML = `
 const footerHTML = `
 <footer>
     <div class="content footer-grid">
-        <div class="footer-section">
+        <div class="footer-section footer-brand">
             <a href="/" class="logo-wrapper mb-10">
-                <img src="img/logo-white.png" alt="Splash Pools Logo" class="logo-img">
+                <img src="img/logo.svg" alt="Splash Pools Logo" class="logo-img">
             </a>
             <p class="text-muted" style="font-size: 0.875rem; line-height: 1.6; margin-bottom: 2rem;">
                 Building premium aquatic experiences since 1998. Quality craftsmanship meets modern
@@ -78,7 +78,7 @@ const footerHTML = `
     </div>
 
     <div class="max-w-1200 policy-links"
-        style="padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; color: var(--slate-400); font-size: 0.75rem;">
+        style="padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; color: var(--white); font-size: 0.75rem;">
         <p>© 2026 Splash Pools & Construction Inc. All rights reserved.</p>
         <div style="display: flex; gap: 1.5rem;">
             <a href="policies.html">Policies</a>

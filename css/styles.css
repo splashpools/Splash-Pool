@@ -3,7 +3,7 @@
    ========================================================================== */
 :root {
     /* Color Palette */
-    --primary: #0c6ed1;
+    --primary: #0173dd;
     --primary-hover: #0059c1;
     --primary-deep: #0041a3;
     --primary-soft: #f0f7ff;
@@ -305,7 +305,8 @@ a {
 
 .specialized-services {
     padding: 50px 0;
-    background-color: #1a73e8;
+    /* background-color: #0173dd; */
+    background-color: #05a3c9;
 }
 
 .specialized-services .section-subtitle {
@@ -586,7 +587,7 @@ a {
 
 .details-section {
     padding: 50px 0;
-    background-color: #0a182e;
+    background-color: #ff6600;
 }
 
 body.dark .details-section {
@@ -623,7 +624,7 @@ body.dark .details-card {
     gap: 0.75rem;
     margin-bottom: 2rem;
     font-size: 1.5rem;
-    color: var(--primary);
+    color: #ff6600;
 }
 
 .checklist {
@@ -645,7 +646,7 @@ body.dark .details-card {
 }
 
 .checklist li .material-symbols-outlined {
-    color: var(--primary);
+    color: #ff6600;
     font-size: 18px;
     line-height: 1.5;
     flex-shrink: 0;
@@ -659,7 +660,7 @@ body.dark .details-card {
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: var(--primary);
+    background-color: #ff6600;
     transform-origin: bottom left;
     transition: transform 0.3s ease-out;
 }
@@ -671,7 +672,7 @@ body.dark .details-card {
 .details-card .btn_learn_more {
     display: inline-block;
     margin: 30px 0 0;
-    color: var(--primary);
+    color: #ff6600;
     font-weight: 700;
     text-decoration: none;
     transition: var(--transition);
@@ -686,7 +687,7 @@ body.dark .details-card {
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: var(--primary);
+    background-color: #ff6600;
     transform-origin: bottom left;
     transition: transform 0.3s ease-out;
 }
@@ -807,7 +808,7 @@ body.dark .trans-card {
    ========================================================================== */
 .contact-section {
     padding: 50px 0;
-    background: var(--gradient-deep);
+    background: linear-gradient(to top, #089496, #05a3c9);
     position: relative;
     overflow: hidden;
 }
@@ -834,7 +835,7 @@ body.dark .trans-card {
 }
 
 .contact-section .section-title-large {
-    color: var(--primary);
+    color: #05a3c9;
 }
 
 .contact-section .section-subtitle-large {
@@ -859,7 +860,7 @@ body.dark .form-container {
 .form-section-header {
     font-size: 19px;
     font-weight: 800;
-    color: var(--primary);
+    color: #05a3c9;
     margin-top: 1.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid var(--border-light);
@@ -921,7 +922,7 @@ textarea:invalid:focus {
 }
 
 .btn-submit {
-    background-color: var(--primary);
+    background-color: #089496;
     border: 2px solid var(--primary) !important;
     color: var(--white);
     width: 100%;
@@ -1207,8 +1208,13 @@ textarea:invalid:focus {
 
 /* Animations */
 @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* ==========================================================================
