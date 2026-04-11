@@ -300,6 +300,215 @@ a {
 }
 
 /* ==========================================================================
+   ABOUT EXPERTISE SECTION
+   ========================================================================== */
+.about-expertise {
+    padding: 50px 0;
+    background-color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-expertise::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: -5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(1, 115, 221, 0.05) 0%, transparent 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 5rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.about-info .section-title {
+    text-align: left;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.about-text {
+    font-size: 1.15rem;
+    color: #4b5563;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.trust-indicators {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 992px) {
+    .trust-indicators {
+        grid-template-columns: 1fr;
+    }
+}
+
+.trust-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.75rem;
+    background: var(--primary-soft);
+    border-radius: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid var(--primary-light);
+    max-width: 80%;
+    margin: auto;
+}
+
+.trust-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(1, 115, 221, 0.1);
+    background: var(--white);
+    border-color: var(--primary);
+}
+
+.trust-icon {
+    font-size: 80px !important;
+    color: var(--primary);
+    background: var(--white);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.trust-item h4 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--text-main);
+    width: 100%;
+    max-width: 100%;
+    font-weight: 800;
+}
+
+.item-text-ref {
+    width: 100%;
+    max-width: 100%;
+}
+
+.trust-item p {
+    font-size: 18px;
+    text-align: center;
+    color: #000;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.feature-badge {
+    padding: 3rem 2rem;
+    background: var(--white);
+    border: 2px solid var(--primary-light);
+    border-radius: 2rem;
+    text-align: center;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.feature-badge:hover {
+    border-color: var(--primary);
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.feature-badge.destaque {
+    grid-column: span 2;
+    background: var(--gradient-primary);
+    border: none;
+    color: var(--white);
+}
+
+.feature-badge.destaque p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.feature-badge.destaque .material-symbols-outlined {
+    color: var(--white);
+}
+
+.feature-badge .material-symbols-outlined {
+    font-size: 3.5rem !important;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.feature-badge h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+    font-weight: 900;
+}
+
+.feature-badge p {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+.trust-item-certification {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.trust-item-certification img {
+    width: 500px;
+    height: 120px;
+    object-fit: contain;
+}
+
+@media (max-width: 992px) {
+    .about-expertise {
+        padding: 5rem 0;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .trust-indicators {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-badge.destaque {
+        grid-column: span 1;
+    }
+}
+
+
+/* ==========================================================================
    SPECIALIZED SERVICES
    ========================================================================== */
 
@@ -333,7 +542,17 @@ a {
     background: var(--white);
     padding: 50px 0;
 }
-
+.slider-section .title-owner {
+    font-size: 30px;
+    text-align: center !important;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+.slider-section .title-owner strong{
+    font-weight: 900;
+    color: #ff6600;
+}
 .hero-slider {
     position: relative;
     width: 100%;
@@ -433,6 +652,61 @@ a {
     width: 30px;
     border-radius: 6px;
 }
+
+/* ==========================================================================
+   OWNER & FOUNDER BIO SECTION
+   ========================================================================== */
+.owner-bio {
+    padding: 50px 0;
+    background-color: #fff;
+    /* Light slate background */
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.owner-bio .about-grid {
+    gap: 6rem;
+}
+
+.owner-bio .section-title {
+    text-align: center;
+    margin: 50px 0;
+    color: var(--primary);
+}
+
+.owner-bio p {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0 auto;
+    color: #000 !important;
+}
+
+.owner-photo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 2rem;
+    transition: transform 0.4s ease;
+}
+
+.owner-photo:hover img {
+    transform: scale(1.02);
+}
+
+@media (max-width: 992px) {
+    .owner-bio .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .owner-photo {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
 
 /* ==========================================================================
    TITLES & SEPARATORS
