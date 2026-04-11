@@ -369,12 +369,6 @@ a {
     margin: auto;
 }
 
-.trust-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 25px -5px rgba(1, 115, 221, 0.1);
-    background: var(--white);
-    border-color: var(--primary);
-}
 
 .trust-icon {
     font-size: 80px !important;
@@ -469,17 +463,41 @@ a {
 
 .trust-item-certification {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    align-items: center;
+    gap: 3rem;
     margin-top: 3rem;
 }
 
 .trust-item-certification img {
-    width: 500px;
-    height: 120px;
+    width: auto;
+    max-width: 350px;
+    height: 100px;
     object-fit: contain;
+}
+
+
+@media (max-width: 1024px) {
+    .trust-item-certification {
+        gap: 2rem;
+    }
+    .trust-item-certification img {
+        max-width: 280px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .trust-item-certification {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .trust-item-certification img {
+        max-width: 240px;
+        height: auto;
+        max-height: 80px;
+    }
 }
 
 @media (max-width: 992px) {
