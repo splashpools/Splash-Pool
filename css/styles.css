@@ -43,7 +43,7 @@
 
 body {
     font-family: 'Work Sans', sans-serif;
-    background-color: var(--background-light);
+    background-color: var(--white);
     color: var(--text-main);
     line-height: 1.5;
     transition: background-color var(--transition), color var(--transition);
@@ -281,6 +281,7 @@ a {
     font-size: 50px;
     font-weight: 900;
     line-height: 1.5;
+    text-transform: uppercase;
 }
 
 .descript_title {
@@ -558,18 +559,31 @@ a {
 
 .slider-section {
     background: var(--white);
-    padding: 50px 0;
+    padding: 50px 0 20px;
 }
 .slider-section .title-owner {
-    font-size: 30px;
+    font-size: 36px;
     text-align: center !important;
-    line-height: 1.5;
-    font-weight: 500;
-    margin-bottom: 50px;
+    line-height: 1.3;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--slate-900);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
 }
 .slider-section .title-owner strong{
     font-weight: 900;
     color: #ff6600;
+    position: relative;
+    display: inline-block;
+}
+.slider-section .text-muted{
+    text-align: center !important;
+    margin-bottom: 60px;
+    font-size: 20px;
+    text-transform: uppercase;
 }
 .hero-slider {
     position: relative;
@@ -1593,6 +1607,7 @@ textarea:invalid:focus {
    ========================================================================== */
 .gallery-section {
     padding: 40px 0;
+    background-color: #fff;
 }
 
 .gallery-section .section-subtitle {
