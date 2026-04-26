@@ -42,6 +42,7 @@ const footerHTML = `
             <h4>Quick Links</h4>
             <ul class="footer-links">
                 <li><a href="services.html">Services</a></li>
+                <li><a href="checklist-opening.html">Pool Opening Checklist</a></li>
                 <li><a href="services.html#pool-opening">Pool Opening Service</a></li>
                 <li><a href="services.html#pool-closing">Pool Closing Service</a></li>
                 <li><a href="contact-us.html">Contact Us</a></li>
