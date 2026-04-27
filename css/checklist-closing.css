@@ -1,0 +1,165 @@
+/* ==========================================================================
+   CHECKLIST CLOSING PAGE STYLES (WINTER THEME)
+   ========================================================================== */
+
+:root {
+    --winter-blue: #2980b9;
+    --winter-blue-light: #ebf5fb;
+    --winter-accent: #34495e;
+    --winter-ice: #d6eaf8;
+}
+
+.checklist-hero.winter {
+    height: 60vh;
+    min-height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/winter-hero.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 1.5rem;
+}
+
+.checklist-hero h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.checklist-hero p {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.max-width-1000 {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.expert-advice-section {
+    padding: 6rem 0;
+    background: var(--winter-blue-light);
+}
+
+.advice-container {
+    display: block;
+    margin-top: 3rem;
+}
+
+.reminders-card-container.winter {
+    padding: 3rem;
+    background: #ffffff;
+    border-radius: 1.5rem;
+    border-left: 8px solid var(--winter-blue);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    margin-top: 2rem;
+}
+
+.reminders-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.warning-icon-wrapper.winter {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: var(--winter-ice);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--winter-blue);
+}
+
+.warning-icon-wrapper .material-symbols-outlined {
+    font-size: 2rem;
+}
+
+.reminders-header h3 {
+    font-size: 2rem;
+    color: #1a3a5a;
+    margin: 0;
+}
+
+.reminders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+.reminder-item-box {
+    background: #f4f9fd;
+    padding: 1.75rem 2rem;
+    border-radius: 1.25rem;
+    line-height: 1.6;
+    color: #4a4a4a;
+    transition: transform 0.2s ease;
+}
+
+.reminder-item-box:hover {
+    transform: translateX(10px);
+}
+
+.reminder-label.winter {
+    color: var(--winter-blue);
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
+.cta-box {
+    margin-top: 5rem;
+    padding: 4rem 2rem;
+    background: var(--gradient-primary);
+    border-radius: 2rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.cta-box h2 {
+    color: white;
+    margin: 0 0 30px;
+}
+
+.cta-box p {
+    color: rgba(255,255,255,0.9);
+    margin: 0 0 30px;
+}
+
+.cta-btn-white {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    max-width: fit-content;
+    background: white !important;
+    color: var(--primary) !important;
+    padding: 1.25rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .checklist-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .reminders-card-container {
+        padding: 1.5rem;
+    }
+    
+    .reminders-header h3 {
+        font-size: 1.5rem;
+    }
+}
