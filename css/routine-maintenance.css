@@ -1,0 +1,200 @@
+/* ==========================================================================
+   ROUTINE MAINTENANCE PAGE STYLES (SUMMER/MAINTENANCE THEME)
+   ========================================================================== */
+
+:root {
+    --maint-teal: #05a3c9;
+    --maint-teal-dark: #04829d;
+    --maint-teal-light: #e6f6f9;
+    --maint-success: #27ae60;
+}
+
+.checklist-hero.maintenance {
+    height: 60vh;
+    min-height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/maintenance-hero.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 1.5rem;
+}
+
+.checklist-hero h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.checklist-hero p {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.max-width-1000 {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.expert-advice-section {
+    padding: 6rem 0;
+    background: var(--maint-teal-light);
+}
+
+/* Service Options Cards (Similar to Image style) */
+.service-option-card {
+    background: #ffffff;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-left: 8px solid var(--maint-teal);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.service-option-card.weekly { border-left-color: var(--maint-success); }
+.service-option-card.biweekly { border-left-color: var(--maint-teal); }
+.service-option-card.monthly { border-left-color: #34495e; }
+
+.service-option-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.service-option-header h3 {
+    font-size: 1.75rem;
+    color: #1a3a5a;
+    margin: 0;
+}
+
+.service-schedule-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #f0f7ff;
+    color: var(--maint-teal-dark);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.service-option-card p {
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+.warranty-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--maint-success);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+/* Inclusions List */
+.inclusions-container {
+    background: #ffffff;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    margin-top: 4rem;
+}
+
+.inclusions-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.inclusions-icon-wrapper {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: var(--maint-teal-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--maint-teal);
+}
+
+.inclusions-header h3 {
+    font-size: 2rem;
+    color: #1a3a5a;
+    margin: 0;
+}
+
+.inclusions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    list-style: none;
+    padding: 0;
+}
+
+.inclusion-item {
+    background: #fcfdfe;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    border: 1px solid #edf2f7;
+    color: #4a4a4a;
+    line-height: 1.6;
+    display: flex;
+    gap: 1.25rem;
+}
+
+.inclusion-item .material-symbols-outlined {
+    color: var(--maint-teal);
+    font-size: 1.5rem;
+}
+
+.cta-box {
+    margin-top: 5rem;
+    padding: 4rem 2rem;
+    background: var(--gradient-primary);
+    border-radius: 2rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.cta-box h2 {
+    color: white;
+    margin: 0 0 30px;
+}
+
+.cta-box p {
+    color: rgba(255,255,255,0.9);
+    margin: 0 0 30px;
+}
+
+.cta-btn-white {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    max-width: fit-content;
+    background: white !important;
+    color: var(--primary) !important;
+    padding: 1.25rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .checklist-hero h1 { font-size: 2.5rem; }
+    .inclusions-container { padding: 1.5rem; }
+    .inclusions-header h3 { font-size: 1.5rem; }
+}
