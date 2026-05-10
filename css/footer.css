@@ -2,19 +2,19 @@
    FOOTER STYLES
    ========================================================================== */
 .text-primary {
-    color: var(--white);
+    color: #010750;
 }
 
 footer {
     /* background-color: #05a3c9; */
-    background-color: #0173dd;
-    color: var(--white);
+    background-color: #fff;
+    color: #010750;
     padding: 5rem 1.5rem 2rem;
 }
 
 .footer-v2 {
     background: #ff6600;
-    color: white;
+    color: #010750;
     padding: 6rem 0 2rem;
 }
 
@@ -22,7 +22,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 3rem;
-    border-bottom: 1px solid var(--white);
+    border-bottom: 1px solid rgba(1, 7, 80, 0.1);
     padding-bottom: 4rem;
 }
 
@@ -43,15 +43,21 @@ footer {
     flex-direction: column;
     gap: 1rem;
     font-size: 0.875rem;
-    color: var(--white);
+    color: #010750;
+}
+
+.footer-links a {
+    color: #010750;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: var(--white);
+    color: var(--primary);
 }
 
 .footer-brand p {
-    color: var(--white);
+    color: #010750;
 }
 
 .footer-logo {
@@ -90,7 +96,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--slate-400);
+    color: #010750;
     font-size: 0.75rem;
 }
 

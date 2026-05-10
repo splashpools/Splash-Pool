@@ -37,7 +37,8 @@ body.dark header {
 .logo-wrapper {
     display: flex;
     align-items: center;
-    max-width: 200px;
+    max-width: 230px;
+    flex-direction: column;
 }
 
 .logo-img {

@@ -9,6 +9,14 @@ const headerHTML = `
     <div class="content header-flex">
         <a href="/" class="logo-wrapper">
             <img src="img/logo.svg" alt="Splash Pools Logo" class="logo-img">
+            <div class="footer-slogan" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic; font-weight: 600; line-height: 1.3; margin-bottom: 2rem; text-align: right; padding-right: 5%;">
+                <div style="font-size: 1.1rem; color: #0056b3; text-shadow: 1px 1px 2px rgba(0,0,0,0.15);">
+                    More than <span style="color: #ff6600;">splash!!...</span>
+                </div>
+                <div style="font-size: 1.1rem; color: #0056b3; text-shadow: 1px 1px 2px rgba(0,0,0,0.15); margin-right: 1.5rem; text-align: right;">
+                    ...a full blast of <span style="color: #ff6600;">quality!!</span>
+                </div>
+            </div>
         </a>
         <button class="hamburger-btn" aria-label="Toggle navigation">
             <span class="material-symbols-outlined">menu</span>
@@ -29,13 +37,18 @@ const footerHTML = `
 <footer>
     <div class="content footer-grid">
         <div class="footer-section footer-brand">
-            <a href="/" class="logo-wrapper mb-10">
+            <a href="/" class="logo-wrapper" style="display: block; margin-bottom: 0.5rem; max-width: 300px;">
                 <img src="img/logo.svg" alt="Splash Pools Logo" class="logo-img">
+                <div class="footer-slogan" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic; font-weight: 600; line-height: 1.3; margin-bottom: 2rem; text-align: right; padding-right: 5%;">
+                    <div style="font-size: 1.1rem; color: #0056b3; text-shadow: 1px 1px 2px rgba(0,0,0,0.15);">
+                        More than <span style="color: #ff6600;">splash!!...</span>
+                    </div>
+                    <div style="font-size: 1.1rem; color: #0056b3; text-shadow: 1px 1px 2px rgba(0,0,0,0.15); margin-right: 1.5rem; text-align: right;">
+                        ...a full blast of <span style="color: #ff6600;">quality!!</span>
+                    </div>
+                </div>
             </a>
-            <p class="text-muted" style="font-size: 0.875rem; line-height: 1.6; margin-bottom: 2rem;">
-                Building premium aquatic experiences since 1998. Quality craftsmanship meets modern
-                engineering in every project.
-            </p>
+            
         </div>
 
         <div class="footer-section">
