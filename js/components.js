@@ -94,7 +94,7 @@ const footerHTML = `
     </div>
 
     <div class="max-w-1200 policy-links"
-        style="padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; color: var(--white); font-size: 0.75rem;">
+        style="padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; color: #010750; font-size: 0.75rem;">
         <p>© 2026 Splash Pools & Construction Inc. All rights reserved.</p>
         <div style="display: flex; gap: 1.5rem;">
             <a href="policies.html">Policies</a>
